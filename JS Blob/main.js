@@ -1,9 +1,5 @@
 /*
     Hello There!!
-    Today I am going to create a JS Blob
-    To do not Forget it (How to use)
-    Inside JS file I'll write the following code
-    and open it with live server...
 */
 //Create Global variables
 var globalVariables,
@@ -11,7 +7,7 @@ var globalVariables,
     blob,
     str,
     integer,
-    content = "    Hello There!!Today I am going to create a JS BlobTo do not Forget it(How to use)Inside JS file I'll write the following code and open it with live server...";
+    content = "    Hello There!!";
 //Init function generates all code
 function init(){
     object = new Blob([content], { type: "text/plain"});
