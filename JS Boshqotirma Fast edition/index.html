@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boshqotirma</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bolder;
+            padding: 2em;
+        }
+
+        h1 {
+            font-size: 300%;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1 id="source" align="center">
+        Generate
+    </h1>
+
+    <script>
+        var total_sum = 500;
+        var should_buy = 100;
+
+        var animals_cost = {
+            sheep: 1,
+            cow: 10,
+            horse: 50
+        };
+
+        var random_horse,
+            random_sheep,
+            random_cow;
+
+        var randomSource = document.getElementById("source");
+
+        for (var sheep = 0; sheep <= 100; sheep++) {
+            for (var cow = 0; cow <= 100; cow++) {
+                for (var horse = 0; horse <= 100; horse++) {
+                    if ((horse * animals_cost.horse) + (cow * animals_cost.cow) + (sheep * animals_cost.sheep) === 5000 && sheep + cow + horse === 100) {
+                        randomSource.innerHTML += "Qoylar " + sheep + ", Otlar " + horse + ", Mollar " + cow;
+                        alert(
+                            "1 soni: " + sheep + ", " + sheep * animals_cost.sheep + " \n"
+                            + "50 soni: " + horse + ", " + horse * animals_cost.horse + " \n"
+                            + "50 soni: " + cow + ", " + cow * animals_cost.cow + " \n"
+                            + "Jami: " + sub3(sheep , cow , horse) +  " " + sub3((horse * animals_cost.horse) , (cow * animals_cost.cow) , (sheep * animals_cost.sheep)) + " \n"
+                        );
+                    }
+                }
+            }
+        }
+
+        function sub3(numb, numb1, numb2){
+            return numb + numb1 + numb2;
+        }
+    </script>
+</body>
+
+</html>

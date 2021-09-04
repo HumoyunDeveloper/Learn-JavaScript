@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foo func</title>
+</head>
+<body>
+    
+    <p>Check Console</p>
+
+    <script>
+        
+        
+        const foo = (num) => {
+            if(num <= 2) return 1;
+            return foo(2 ) + foo(2 );
+        };
+        
+        console.log(foo(3));
+
+
+
+    </script>
+</body>
+</html>

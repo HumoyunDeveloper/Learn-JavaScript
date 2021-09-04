@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boshqotirma</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bolder;
+            padding: 2em;
+        }
+
+        h1 {
+            margin-left: -2em;
+            font-size: 300%;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1 id="source" align="center">
+        Generate
+    </h1>
+
+    <script>
+        var total_sum = 500;
+        var should_buy = 100;
+
+        var animals_cost = {
+            sheep: 1,
+            cow: 10,
+            horse: 50
+        };
+
+        var random_horse,
+            random_sheep,
+            random_cow;
+
+        var randomSource = document.getElementById("source");
+
+        var interval = setInterval(generateRandomNumbers, 0);
+        function generateRandomNumbers() {
+            random_sheep = Math.floor(Math.random() * 100);
+            random_horse = Math.floor(Math.random() * 100);
+            random_cow = Math.floor(Math.random() * 100);
+
+            if ((random_horse * animals_cost.horse) + (random_cow * animals_cost.cow) + (random_sheep * animals_cost.sheep) === 500 && random_sheep + random_cow + random_horse === 100) {
+                clearInterval(interval);
+                alert();
+                randomSource.innerHTML = "Qoylar " + random_sheep + ", Otlar " + random_horse + ", Mollar " + random_cow;
+            }
+            else {
+                randomSource.innerHTML = (random_horse * animals_cost.horse) + (random_cow * animals_cost.cow) + (random_sheep * animals_cost.sheep);
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>

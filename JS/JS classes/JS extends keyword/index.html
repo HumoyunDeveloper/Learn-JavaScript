@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Extends keyword</title>
+</head>
+<body>
+    
+    <p>Check console</p>
+
+    <script>
+        class Person {
+            constructor(_name){
+                this.name = _name;
+            }
+            
+            bark() {
+                return this.name + " is barking";
+            }
+        }
+
+        class Child extends Person {
+            super(_name, _age){
+                this.name = _name;
+                this.age = _age;
+            }
+        }
+
+        var child = new Child("Children");
+        var person = new Person("Father");
+
+        console.log(child);
+        console.log(child.bark());
+        console.log(person.bark());
+
+
+
+
+    </script>
+
+</body>
+</html>
